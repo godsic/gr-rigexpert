@@ -556,8 +556,8 @@ int fobos_rffc507x_init(struct fobos_dev_t * dev)
         fobos_rffc507x_register_modify(&dev->rffc507x_registers_local[0x15], 15, 15, 1);
         // 0 = half duplex
         fobos_rffc507x_register_modify(&dev->rffc507x_registers_local[0x0B], 15, 15, 0);
-        int MIX1_IDD = 1;
-        int MIX2_IDD = 1;
+        int MIX1_IDD = 4;
+        int MIX2_IDD = 4;
         int mix = (MIX1_IDD << 3) | MIX2_IDD;
         fobos_rffc507x_register_modify(&dev->rffc507x_registers_local[0x0B], 14, 9, mix);
 
