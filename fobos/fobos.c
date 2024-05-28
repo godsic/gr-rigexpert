@@ -1041,7 +1041,7 @@ int fobos_rx_set_frequency(struct fobos_dev_t * dev, double value, double * actu
             {
                 dev->rx_swap_iq = 0;
                 // set frequencies
-                uint32_t max2830_mhz = 2400;
+                uint32_t max2830_mhz = 2500;
                 RFFC5071_freq_mhz = max2830_mhz - freq_mhz;
                 fobos_rffc507x_set_lo_frequency(dev, RFFC5071_freq_mhz, &RFFC5071_freq_hz_actual);
                 max2830_freq = (double)(RFFC5071_freq_hz_actual + freq);
